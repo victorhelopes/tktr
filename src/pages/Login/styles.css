@@ -1,0 +1,14 @@
+.Login {
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 20rem;
+
+    h1{
+        text-align: center;
+        margin-bottom: 2rem;
+        color: var(--primary-color);
+    }
+}
