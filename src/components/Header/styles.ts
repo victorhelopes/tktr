@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const Header = styled.div`
-   
     height: 7rem;
     background-color: var(--black-color);
 

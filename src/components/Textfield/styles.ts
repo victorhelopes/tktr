@@ -5,6 +5,7 @@ export const TextField = styled.div<{status: string}>`
     display: flex;
     flex-direction: column;
     width: 100%;
+    max-width: 23.5rem;
 
     input {
         ${({status}) => 

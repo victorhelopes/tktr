@@ -40,6 +40,11 @@ export const Coment = styled.div`
         color: var(--black-color);
     }
 
+    img {
+        width: 4rem;
+        height: 4rem;
+    }
+
     color: #6D6D6D;
     padding: 2rem 0;
     border-bottom: 1px dashed;
@@ -51,6 +56,13 @@ export const Row = styled.div`
     gap: 2rem;
 `
 
+export const RowInput = styled.div`
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+`
+
 export const PostInfo = styled.div`
     button{
         display: none;  
@@ -60,7 +72,8 @@ export const PostInfo = styled.div`
         button{
             display: block;
             position: relative;
-            width: 300px;
+            width: 100%;
+            max-width: 300px;
         }
     }
 `
@@ -76,6 +89,7 @@ export const ComentForm = styled.div`
         margin-bottom: 1.5rem;
     }
     button{
-        width: 250px;
+        width: 100%;
+        max-width: 250px;
     }
 `;

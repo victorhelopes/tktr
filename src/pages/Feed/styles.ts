@@ -4,12 +4,15 @@ export const Posts = styled.div`
     gap: 2rem;
     display: flex;
     flex-direction: column;
+    width: 100%;
+    max-width: 51.9rem;
 `
 
 export const Row = styled.div`
     margin-top: 2rem;
     display: flex;
-    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
 `;
 
 export const Tasks = styled.div`

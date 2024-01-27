@@ -84,16 +84,23 @@ export function Post({postId, title, body, creator}: showPostInterface){
                     <S.Underline/>
                     {comentaries.map(coment =>{ return (
                         <S.Coment>
-                            <h4>{coment.name}</h4>
-                            <p>{coment.body}</p>
-                        </S.Coment>
+                            <S.Row>
+                                <div>
+                                    <img src='' alt=''/>
+                                </div>
+                                <div>
+                                    <h4>{coment.name}</h4>
+                                    <p>{coment.body}</p>
+                                </div>
+                            </S.Row>
+                            </S.Coment>
                     )})}
                     <S.ComentForm>
                         <h3>Deixe seu comentário</h3>
-                        <S.Row>
+                        <S.RowInput>
                             <Textfield value={name} type='text' label='' placeholder='Nome' status='' errorMessage={nameError} setValue={setName}/>
                             <Textfield value={email} type='email' label='' placeholder='E-mail' status='' errorMessage={emailError} setValue={setEmail}/>
-                        </S.Row>
+                        </S.RowInput>
                         <S.Row>
                             <textarea name="comentary" placeholder='Comentário' cols={40} rows={5} onChange={(e)=>{
                                 setComentary(e.target.value)

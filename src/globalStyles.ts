@@ -1,11 +1,25 @@
+import { createGlobalStyle } from "styled-components";
 
+export const GlobalStyle = createGlobalStyle`
 * {
   margin: 0;
   font-family: Roboto, Helvetica, Sans-Serif;
   }
 
   .Container {
-    padding: 0 23.5rem;
+    padding: 1rem;
+  }
+
+  @media only screen and (min-width: 600px) {
+    .Container {
+      padding: 5rem;
+    }
+  }
+
+  @media only screen and (min-width: 1025px) {
+    .Container {
+      padding: 0 23.5rem;
+    }
   }
 
   #root {
@@ -23,3 +37,4 @@
   }
 
   
+`;

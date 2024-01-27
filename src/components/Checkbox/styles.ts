@@ -8,8 +8,4 @@ export const Checkbox = styled.input.attrs({type: 'checkbox'})`
 
 export const Row = styled.div`
     display: flex;
-
-    input[type='checkbox'] {
-    
-}
 `

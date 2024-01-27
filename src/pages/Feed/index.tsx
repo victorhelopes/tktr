@@ -8,12 +8,15 @@ import { userInterface } from "../../types/user";
 import * as S from './styles'
 import { Checkbox } from "../../components/Checkbox";
 import { useNavigate } from "react-router-dom";
+import { PhotosCarousel } from "../../components/PhotosCarousel";
+import { photoInterface } from "../../types/photo";
 
 export function Feed(){
     const navigate = useNavigate();
 
-    const [posts, setPosts] = useState([]);
+    const [posts, setPosts] = useState<postInterface[]>([]);
     const [users, setUsers] = useState<userInterface[]>([]);
+    const [photos, setPhotos] = useState<photoInterface[]>([]);
 
     function getPosts(){
         fetch('https://jsonplaceholder.typicode.com/posts')
@@ -32,6 +35,15 @@ export function Feed(){
         })
     }
 
+    function getPhotos(){
+        fetch(`https://jsonplaceholder.typicode.com/albums/1/photos`)
+        .then((response)=> response.json())
+        .then((json)=>{
+            setPhotos(json)
+        })
+        
+    }
+
     function postCreator(userId: number){
         const userCreator = users.find((user: userInterface) => user.id === userId);
         if(userCreator){
@@ -48,6 +60,7 @@ export function Feed(){
         }
         getPosts();
         getUsers();
+        getPhotos();
         
     },[navigate])
 
@@ -57,6 +70,7 @@ export function Feed(){
             <Header image="src"/>
             <S.Row className="Container">
                 <S.Posts>
+                <PhotosCarousel photos={photos.slice(0, 5)} />
                     {posts.map((post: postInterface)=>{
                         return <Post 
                             postId={post.id}

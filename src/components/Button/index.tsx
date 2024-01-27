@@ -1,4 +1,4 @@
-import './styles.css'
+import * as S from './styles'
 
 interface buttonInterface {
     label: string;
@@ -7,6 +7,6 @@ interface buttonInterface {
 
 export function Button({label, buttonFunction}:buttonInterface){
     return(
-        <button onClick={buttonFunction}>{label}</button>
+        <S.Button onClick={buttonFunction}>{label}</S.Button>
     );
 }
