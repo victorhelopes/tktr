@@ -1,7 +1,8 @@
-import './styles.css'
+import * as S from'./styles'
 
 interface textfieldInterface {
     placeholder: string;
+    value: string;
     label: string;
     type: 'number' | 'password' | 'text' | 'email'
     status: 'error' | ''
@@ -9,12 +10,12 @@ interface textfieldInterface {
     setValue: (value : string)=>void;
 }
 
-export function Textfield({placeholder, label, type, status, errorMessage, setValue}:textfieldInterface ){
+export function Textfield({placeholder, label, type, status, errorMessage, value, setValue}:textfieldInterface ){
     return(
-        <div className='textField'>
+        <S.TextField status={status}>
             <label>{label}</label>
-            <input className={status} placeholder={placeholder} type={type} onChange={(e)=>{setValue(e.target.value)}}/>
-             <p>{errorMessage}</p>
-        </div>
+            <input value={value} placeholder={placeholder} type={type} onChange={(e)=>{setValue(e.target.value)}}/>
+             <S.Error>{errorMessage}</S.Error>
+        </S.TextField>
     );
 }

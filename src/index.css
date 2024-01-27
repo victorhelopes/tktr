@@ -1,13 +1,16 @@
 
 * {
   margin: 0;
-  background-color: var(--background-color);
   font-family: Roboto, Helvetica, Sans-Serif;
   }
 
-  #root {
+  .Container {
     padding: 0 23.5rem;
-    height: 100vh;
+  }
+
+  #root {
+    height: 100%;
+    background-color: var(--background-color);
   }
 
   :root{
@@ -16,4 +19,7 @@
     --error: red;
     --white-color: #fff;
     --black-color: #000;
+    --gray-color: #848484
   }
+
+  

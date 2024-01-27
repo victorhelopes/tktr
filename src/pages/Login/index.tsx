@@ -1,12 +1,15 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 import { Button } from "../../components/Button";
 import { Textfield } from "../../components/Textfield";
 
 import './styles.css'
-import { useNavigate } from "react-router-dom";
+import { userInterface } from "../../types/user";
 
 export function Login(){
     const navigate = useNavigate();
+
     const [username, setUsername] = useState<string>('');
     const [password, setPassword] = useState<string>('');
     const [usernameError, setUsernameError] = useState<string | null>(null);
@@ -33,8 +36,9 @@ export function Login(){
         fetch('https://jsonplaceholder.typicode.com/users')
         .then((response)=> response.json())
         .then((json)=>{
-            const user = json.find((element: any) => element.username === username)
+            const user = json.find((element:userInterface) => element.username === username)
             if(user){
+                localStorage.setItem('user', JSON.stringify(user))
                 navigate('/feed')
                 return;
             }
@@ -47,6 +51,7 @@ export function Login(){
         <div className="Login">
             <h1>Relize seu login e acesse o feed</h1>
             <Textfield 
+                value={username}
                 placeholder="Nome" 
                 label="Nome:" 
                 type="text"
@@ -55,6 +60,7 @@ export function Login(){
                 setValue={setUsername}
             />
             <Textfield 
+                value={password}
                 placeholder="Senha" 
                 label="Senha:" 
                 type="password"
