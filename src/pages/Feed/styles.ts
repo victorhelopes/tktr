@@ -6,6 +6,7 @@ export const Posts = styled.div`
     flex-direction: column;
     width: 100%;
     max-width: 51.9rem;
+    margin-bottom: 2rem;
 `
 
 export const Row = styled.div`
@@ -13,6 +14,7 @@ export const Row = styled.div`
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 1rem;
+    justify-content: space-between;
 `;
 
 export const Tasks = styled.div`
@@ -24,6 +26,10 @@ export const Tasks = styled.div`
 
     p {
         text-align: center;
+    }
+
+    .Title{
+        font-weight: bold;
     }
 
     input {

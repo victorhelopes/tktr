@@ -81,7 +81,7 @@ export function Feed(){
                     })}
                 </S.Posts>
                 <S.Tasks>
-                    <p>Tarefas</p>
+                    <p className="Title">Tarefas</p>
                     <S.Underline/>
                     <Checkbox label="Completas"/>
                     <Checkbox label="Incompletas"/>
