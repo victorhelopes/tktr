@@ -11,6 +11,8 @@ import { useNavigate } from "react-router-dom";
 import { PhotosCarousel } from "../../components/PhotosCarousel";
 import { photoInterface } from "../../types/photo";
 
+import avatar from "../../assets/avatar.png";
+
 export function Feed(){
     const navigate = useNavigate();
 
@@ -67,7 +69,7 @@ export function Feed(){
 
     return(
         <>
-            <Header image="src"/>
+            <Header image={avatar}/>
             <S.Row className="Container">
                 <S.Posts>
                 <PhotosCarousel photos={photos.slice(0, 5)} />

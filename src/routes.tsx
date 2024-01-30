@@ -7,7 +7,7 @@ export default function PagesRoutes(){
     return(
         <Routes>
             <Route  path = "/Login" element={<Login/>}/>
-            <Route  path = "/Feed" element={<Feed/>}/>
+            <Route  path = "/" element={<Feed/>}/>
         </Routes>
     );
 }

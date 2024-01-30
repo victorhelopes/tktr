@@ -1,8 +1,11 @@
 import { useEffect, useState } from 'react';
 import { comentsInterface } from '../../types/coments';
 import { Textfield } from '../Textfield';
+
 import * as S from './styles'
+
 import { Button } from '../Button';
+import avatar from '../../assets/avatar.png'
 
 interface showPostInterface {
     postId: number;
@@ -86,7 +89,7 @@ export function Post({postId, title, body, creator}: showPostInterface){
                         <S.Coment>
                             <S.Row>
                                 <div>
-                                    <img src='' alt=''/>
+                                    <img src={avatar} alt=''/>
                                 </div>
                                 <div>
                                     <h4>{coment.name}</h4>
@@ -106,7 +109,7 @@ export function Post({postId, title, body, creator}: showPostInterface){
                                 setComentary(e.target.value)
                             }}/>
                         </S.Row>
-                        <Button label='Enviar comentário' buttonFunction={()=>{createComentary(); return false;}}/>
+                        <Button label='Enviar comentário' buttonFunction={()=>{createComentary()}}/>
                     </S.ComentForm>
                 </>
             }

@@ -39,7 +39,7 @@ export function Login(){
             const user = json.find((element:userInterface) => element.username === username)
             if(user){
                 localStorage.setItem('user', JSON.stringify(user))
-                navigate('/feed')
+                navigate('/')
                 return;
             }
             setUsernameError('Verifique se foi preenchido corretamente')

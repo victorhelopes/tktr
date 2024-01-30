@@ -43,3 +43,12 @@ Você deve criar um aplicativo React com TypeScript que inclua os seguintes requ
 - Sinta-se à vontade para adicionar funcionalidades ou melhorias adicionais ao seu projeto, se desejar, para demonstrar suas habilidades.
 
 Boa sorte e divirta-se desenvolvendo o aplicativo! Se você tiver alguma dúvida, não hesite em entrar em contato conosco.
+
+
+## Como usar
+
+ - Deve fazer instalação das dependências do projeto executando o yarn ou npm run install.
+ - Após a instalação para executar bastar rodar yarn start ou npm run start
+ - Para realizar o login basta colocar o nome de alguns dos usuarios existentes na base de dados do JSONPlaceholder e digitar algo em senha.
+ - Para ver os comentários ao passar o mouse por cima de um post aparecera um botao de ver comentarios.
+ - Como os usuarios na api não possuem fotos foi colocado uma foto de exemplo. Os posts também não possuem então foi colocado uma foto para exemplo do carousel de imagens.

@@ -1,3 +1,4 @@
+declare module "*.png"
 export interface photoInterface{
     albumId: number;
     id: number;
